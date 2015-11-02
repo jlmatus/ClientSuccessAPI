@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ClientSuccess {
+public class ClientSuccess {
     
     static let sharedController = ClientSuccess()
     
