@@ -18,7 +18,7 @@ public class ClientSuccess {
     var apiKey: String?
     var projectId: String?
     
-    func addEvent(eventId: String, organizationId: String, organizationName: String, userId: String, userName: String, userEmail: String, eventValue: String, completionHandler handler: (() -> ())? = nil, errorHandler: ((errorMessage: String) -> ())? = nil) {
+  public func addEvent(eventId: String, organizationId: String, organizationName: String, userId: String, userName: String, userEmail: String, eventValue: String, completionHandler handler: (() -> ())? = nil, errorHandler: ((errorMessage: String) -> ())? = nil) {
         if let apiKey = apiKey, projectId = projectId, urlString = (clientSucessURL.stringByAppendingString(projectId).stringByAppendingString(eventString).stringByAppendingString(eventId + "?api_key=").stringByAppendingString(apiKey)).stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet()), url = NSURL(string: urlString) {
             let request = NSMutableURLRequest(URL: url)
             request.HTTPMethod = "POST"
