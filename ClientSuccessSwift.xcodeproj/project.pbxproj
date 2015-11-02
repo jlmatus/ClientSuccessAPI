@@ -10,6 +10,7 @@
 		82591A911BE7C07E00BDA9CB /* ClientSuccessSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 82591A901BE7C07E00BDA9CB /* ClientSuccessSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82591A981BE7C07E00BDA9CB /* ClientSuccessSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82591A8D1BE7C07E00BDA9CB /* ClientSuccessSwift.framework */; };
 		82591A9D1BE7C07E00BDA9CB /* ClientSuccessSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82591A9C1BE7C07E00BDA9CB /* ClientSuccessSwiftTests.swift */; };
+		82591AA81BE7C30700BDA9CB /* ClientSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82591AA71BE7C30700BDA9CB /* ClientSuccess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		82591A971BE7C07E00BDA9CB /* ClientSuccessSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClientSuccessSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82591A9C1BE7C07E00BDA9CB /* ClientSuccessSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSuccessSwiftTests.swift; sourceTree = "<group>"; };
 		82591A9E1BE7C07E00BDA9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82591AA71BE7C30700BDA9CB /* ClientSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSuccess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				82591A901BE7C07E00BDA9CB /* ClientSuccessSwift.h */,
+				82591AA71BE7C30700BDA9CB /* ClientSuccess.swift */,
 				82591A921BE7C07E00BDA9CB /* Info.plist */,
 			);
 			path = ClientSuccessSwift;
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82591AA81BE7C30700BDA9CB /* ClientSuccess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 		82591AA21BE7C07E00BDA9CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +323,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rain.agency.ClientSuccessSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		82591AA31BE7C07E00BDA9CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -376,6 +383,7 @@
 				82591AA31BE7C07E00BDA9CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82591AA41BE7C07E00BDA9CB /* Build configuration list for PBXNativeTarget "ClientSuccessSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +392,7 @@
 				82591AA61BE7C07E00BDA9CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
