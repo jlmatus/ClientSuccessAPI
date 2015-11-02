@@ -10,13 +10,13 @@ import Foundation
 
 public class ClientSuccess {
     
-    static let sharedController = ClientSuccess()
+    public static let sharedController = ClientSuccess()
     
     private let clientSucessURL = "https://usage.clientsuccess.com/collector/1.0.0/projects/"
     private let eventString = "/events/"
     
-    var apiKey: String?
-    var projectId: String?
+    public var apiKey: String?
+    public var projectId: String?
     
   public func addEvent(eventId: String, organizationId: String, organizationName: String, userId: String, userName: String, userEmail: String, eventValue: String, completionHandler handler: (() -> ())? = nil, errorHandler: ((errorMessage: String) -> ())? = nil) {
         if let apiKey = apiKey, projectId = projectId, urlString = (clientSucessURL.stringByAppendingString(projectId).stringByAppendingString(eventString).stringByAppendingString(eventId + "?api_key=").stringByAppendingString(apiKey)).stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet()), url = NSURL(string: urlString) {
